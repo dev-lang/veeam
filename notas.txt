@@ -1,0 +1,35 @@
+ItemRestoreAudits> auditar restores
+BackupRepositories> ver recursos backupeados
+Backup.Model.Storages > ver backup-jobs
+Backup.Model.RotatedDrives > info de unidades en uso por veeam
+Backup.Model.RestoreJobSessions > Ver jobs de restore ejecutados
+Backup.Model.JobSessions > Ver Jobs (todos los ejecutados como backup o FLR (FiLe Restore))
+Backup.Model.BackupTaskSessions > BACKUPS (incluye ocultas por la GUI de veeam)
+Backup.Model.BackupJobSessions >> sesiones de backups y motivos *ademas de mas data
+
+
+
+
+-- TRACKED ACTIONS
+SELECT * FROM [Backup.TrackedActions]
+select * from [Backup.TrackedActions.FileRestore]
+
+
+-- OBJECTS IN JOBS
+SELECT * FROM ObjectsInJobs
+
+
+-- OPCIONES
+SELECT * FROM Options
+
+
+-- ItemRestoreAudits
+SELECT * FROM ItemRestoreAudits
+
+
+-- 
+SELECT * FROM dbo.ReplicationInfo
+
+-- otras func
+SELECT * FROM Hosts
+SELECT * FROM PhysicalHosts
