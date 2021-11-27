@@ -21,6 +21,14 @@ copy %filedir% %destdir%\VeeamBackup.mdf
 copy %filedir2% %destdir%\VeeamBackup_log.ldf
 
 pause
+
+TAKEOWN /F %destdir%\VeeamBackup.mdf
+ICACLS %destdir%\VeeamBackup.mdf /grant Everyone:F
+
+TAKEOWN /F %destdir%\VeeamBackup_log.ldf
+ICACLS %destdir%\VeeamBackup_log.ldf /grant Everyone:F
+
+pause
 NET START VeeamEndpointBackupSvc
 
 echo INFO del reg
