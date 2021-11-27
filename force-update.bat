@@ -1,0 +1,2 @@
+net stop VeeamEndpointBackupSvc
+net start VeeamEndpointBackupSvc
